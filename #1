@@ -1,9 +1,7 @@
--- las mujeres se
--- Key:
+--Key:
 
 local Code = "Release"
 local KeyE = false
-
 
 -- Instances:
 
@@ -24,13 +22,11 @@ local GetKey = Instance.new("TextButton")
 local Key = Instance.new("TextBox")
 local CheckKey = Instance.new("TextButton")
 
-
--- Properties:
+--Properties:
 
 FruitFinder.Name = "FruitFinder"
 FruitFinder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 FruitFinder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 
 Background.Name = "Background"
 Background.Parent = FruitFinder
@@ -40,14 +36,11 @@ Background.BorderSizePixel = 0
 Background.Position = UDim2.new(0.129303753, 0, 0.314814895, 0)
 Background.Size = UDim2.new(0.455241114, 0, 0.367901236, 0)
 
-
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = Background
 
-
 UnlockedGui.Name = "UnlockedGui"
 UnlockedGui.Parent = Background
-
 
 PlayerPicture.Name = "PlayerPicture"
 PlayerPicture.Parent = UnlockedGui
@@ -59,7 +52,6 @@ PlayerPicture.Position = UDim2.new(0.026890751, 0, 0.248322144, 0)
 PlayerPicture.Size = UDim2.new(0.168067187, 0, 0.335570484, 0)
 PlayerPicture.Visible = false
 PlayerPicture.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
 
 Title.Name = "Title"
 Title.Parent = UnlockedGui
@@ -77,7 +69,6 @@ Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
 
-
 Stats.Name = "Stats"
 Stats.Parent = UnlockedGui
 Stats.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -93,7 +84,6 @@ Stats.TextColor3 = Color3.fromRGB(255, 255, 255)
 Stats.TextScaled = true
 Stats.TextSize = 14.000
 Stats.TextWrapped = true
-
 
 Time.Name = "Time"
 Time.Parent = UnlockedGui
@@ -111,7 +101,6 @@ Time.TextScaled = true
 Time.TextSize = 14.000
 Time.TextWrapped = true
 
-
 Discord.Name = "Discord"
 Discord.Parent = UnlockedGui
 Discord.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -127,7 +116,6 @@ Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
 Discord.TextScaled = true
 Discord.TextSize = 14.000
 Discord.TextWrapped = true
-
 
 Subtitle.Name = "Subtitle"
 Subtitle.Parent = UnlockedGui
@@ -145,7 +133,6 @@ Subtitle.TextScaled = true
 Subtitle.TextSize = 14.000
 Subtitle.TextWrapped = true
 
-
 PlayerName.Name = "PlayerName"
 PlayerName.Parent = UnlockedGui
 PlayerName.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -162,10 +149,8 @@ PlayerName.TextScaled = true
 PlayerName.TextSize = 14.000
 PlayerName.TextWrapped = true
 
-
 LockedGui.Name = "LockedGui"
 LockedGui.Parent = Background
-
 
 Title_2.Name = "Title"
 Title_2.Parent = LockedGui
@@ -182,7 +167,6 @@ Title_2.TextScaled = true
 Title_2.TextSize = 14.000
 Title_2.TextWrapped = true
 
-
 GetKey.Name = "GetKey"
 GetKey.Parent = LockedGui
 GetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -196,7 +180,6 @@ GetKey.TextColor3 = Color3.fromRGB(70, 70, 70)
 GetKey.TextScaled = true
 GetKey.TextSize = 14.000
 GetKey.TextWrapped = true
-
 
 Key.Name = "Key"
 Key.Parent = LockedGui
@@ -215,7 +198,6 @@ Key.TextSize = 14.000
 Key.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Key.TextWrapped = true
 
-
 CheckKey.Name = "CheckKey"
 CheckKey.Parent = LockedGui
 CheckKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -230,10 +212,9 @@ CheckKey.TextScaled = true
 CheckKey.TextSize = 14.000
 CheckKey.TextWrapped = true
 
-
 -- Scripts:
 
-local function HIHMY_fake_script() -- LockedGui.KeySystem
+local function HIHMY_fake_script() -- LockedGui.KeySystem 
 	local script = Instance.new('LocalScript', LockedGui)
 
 	GetKey.Activated:Connect(function()
@@ -258,8 +239,7 @@ local function HIHMY_fake_script() -- LockedGui.KeySystem
 	end)
 end
 coroutine.wrap(HIHMY_fake_script)()
-
-local function KOULNL_fake_script() -- Background.Drag
+local function KOULNL_fake_script() -- Background.Drag 
 	local script = Instance.new('LocalScript', Background)
 
 	local UIS = game:GetService('UserInputService')
@@ -298,10 +278,7 @@ local function KOULNL_fake_script() -- Background.Drag
 	end)
 end
 coroutine.wrap(KOULNL_fake_script)()
-
--- To fix the error on line 345, you need to update the variable name from "Time" to "TimeLabel" in the script. Here's the corrected code:
-
-local function IORYQ_fake_script() -- Background.Main
+local function IORYQ_fake_script() -- Background.Main 
 	local script = Instance.new('LocalScript', Background)
 
 	spawn(function()
@@ -319,14 +296,15 @@ local function IORYQ_fake_script() -- Background.Main
 			end
 		end
 
-		-- FPS
+		--FPS
 		spawn(function()
 			while wait(.25) do
-				Stats.Text = "FPS: " .. Round(workspace:GetRealPhysicsFPS())
+				Stats.Text = 
+					"FPS: " .. Round(workspace:GetRealPhysicsFPS())
 			end
 		end)
 
-		-- Name, PlayerPicture
+		--Name, PlayerPicture
 		PlayerName.Text = game.Players.LocalPlayer.DisplayName
 
 		local UserId = game.Players.LocalPlayer.UserId
@@ -338,20 +316,23 @@ local function IORYQ_fake_script() -- Background.Main
 			ThumbnailSize
 		)
 
-		-- CurrentTime
+		--CurrentTime
 		spawn(function()
 			while wait() do
 				local HMS = os.date("%H:%M:%S")
+				
 				local ZoneTime = tostring(HMS)
+				
 				if ZoneTime then
-					TimeLabel.Text = ZoneTime
+					Time.Text = ZoneTime
 				end
 			end
 		end)
 
-		-- Fruits
+		--Fruits
+		
 		game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("SetTeam", "Pirates")
-
+		
 		spawn(function()
 			repeat wait() until game.Players.LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame:FindFirstChild("TextButton")
 			local textButton = game.Players.LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton
@@ -360,7 +341,7 @@ local function IORYQ_fake_script() -- Background.Main
 			textButton.Position = UDim2.new(-4, 0, -5, 0)
 			textButton.BackgroundTransparency = 1
 		end)
-
+		
 		wait(1)
 		game:GetService("VirtualInputManager"):SendMouseButtonEvent(500,500, 0, true, game, 1)
 		game:GetService("VirtualInputManager"):SendMouseButtonEvent(500,500, 0, false, game, 1)
@@ -369,9 +350,9 @@ local function IORYQ_fake_script() -- Background.Main
 		game:GetService("VirtualInputManager"):SendMouseButtonEvent(500,500, 0, false, game, 1)
 
 		repeat wait(1) until game.Workspace.Characters:FindFirstChild(game.Players.LocalPlayer.Name)
-
+		
 		warn("Test")
-
+		
 		local plr = game.Players.LocalPlayer
 		local chr = plr.Character
 		local t = game.TweenService
@@ -416,76 +397,71 @@ local function IORYQ_fake_script() -- Background.Main
 		print('nope')
 		local currentJobId = game.JobId
 		repeat
-			task.spawn(pcall, function()
-				Time = 0.1 -- seconds
-				repeat wait() until game:IsLoaded()
-				wait(Time)
-				local PlaceID = game.PlaceId
-				local AllIDs = {}
-				local foundAnything = ""
-				local actualHour = os.date("!*t").hour
-				local Deleted = false
-				local function TPReturner()
-					local Site;
-					if foundAnything == "" then
-						Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
-					else
-						Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-					end
-					local ID = ""
-					if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-						foundAnything = Site.nextPageCursor
-					end
-					local num = 0;
-					for i,v in pairs(Site.data) do
-						local Possible = true
-						ID = tostring(v.id)
-						if tonumber(v.maxPlayers) > tonumber(v.playing) then
-							for _,Existing in pairs(AllIDs) do
-								if num ~= 0 then
-									if ID == tostring(Existing) then
-										Possible = false
-									end
-								else
-									if tonumber(actualHour) ~= tonumber(Existing) then
-										local delFile = pcall(function()
-											delfile("NotSameServers.json")
-											AllIDs = {}
-											table.insert(AllIDs, actualHour)
-										end)
-									end
-								end
-								num = num + 1
-							end
-							if Possible == true then
-								table.insert(AllIDs, ID)
-								wait()
-								pcall(function()
-									writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
-									wait()
-									game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
-								end)
-								wait(4)
-							end
-						end
-					end
-				end
+			local function ServerHopper()
+    local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    
+    local function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(4)
+                end
+            end
+        end
+    end
 
-				local function Teleport()
-					while wait() do
-						pcall(function()
-							TPReturner()
-							if foundAnything ~= "" then
-								TPReturner()
-							end
-						end)
-					end
-				end
+    local function Teleport()
+        while wait(2) do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
 
-				Teleport()
-			end)
-			wait(2)
-		until game.JobId ~= currentJobId
-	end)
+    Teleport()
 end
-coroutine.wrap(IORYQ_fake_script)()
+
+spawn(ServerHopper)
