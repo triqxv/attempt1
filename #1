@@ -299,6 +299,8 @@ local function KOULNL_fake_script() -- Background.Drag
 end
 coroutine.wrap(KOULNL_fake_script)()
 
+-- To fix the error on line 345, you need to update the variable name from "Time" to "TimeLabel" in the script. Here's the corrected code:
+
 local function IORYQ_fake_script() -- Background.Main
 	local script = Instance.new('LocalScript', Background)
 
@@ -342,7 +344,7 @@ local function IORYQ_fake_script() -- Background.Main
 				local HMS = os.date("%H:%M:%S")
 				local ZoneTime = tostring(HMS)
 				if ZoneTime then
-					Time.Text = ZoneTime
+					TimeLabel.Text = ZoneTime
 				end
 			end
 		end)
