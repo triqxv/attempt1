@@ -1,6 +1,4 @@
---pufffly bruu
 --Key:
-
 
 local Code = "Release"
 local KeyE = false
@@ -446,9 +444,9 @@ local function IORYQ_fake_script() -- Background.Main
 								pcall(function()
 									writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
 									wait()
-									game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+									game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players)
 								end)
-								wait(2)
+								wait(4)
 							end
 						end
 					end
@@ -467,7 +465,7 @@ local function IORYQ_fake_script() -- Background.Main
 
 				Teleport()
 			end)
-			wait(4)
+			wait(2)
 		until game.JobId ~= currentJobId
 	end)
 end
