@@ -1,3 +1,4 @@
+--lol
 --Key:
 
 local Code = "Release"
@@ -63,7 +64,7 @@ Title.Position = UDim2.new(0, 0, -0.000878250867, 0)
 Title.Size = UDim2.new(0.999999821, 0, 0.174496651, 0)
 Title.Visible = false
 Title.Font = Enum.Font.FredokaOne
-Title.Text = "PunkHub Fruit Finder"
+Title.Text = "Jude's Fruit Finder"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
@@ -111,7 +112,7 @@ Discord.Position = UDim2.new(0.602330089, 0, 0.824625134, 0)
 Discord.Size = UDim2.new(0.396638572, 0, 0.174496651, 0)
 Discord.Visible = false
 Discord.Font = Enum.Font.FredokaOne
-Discord.Text = "discord.gg/silentcaliber"
+Discord.Text = "https://discord.gg/ZnpMtnX4SD"
 Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
 Discord.TextScaled = true
 Discord.TextSize = 14.000
@@ -127,7 +128,7 @@ Subtitle.Position = UDim2.new(0.551260412, 0, 0.331336528, 0)
 Subtitle.Size = UDim2.new(0.447058737, 0, 0.174496651, 0)
 Subtitle.Visible = false
 Subtitle.Font = Enum.Font.FredokaOne
-Subtitle.Text = "Searching fruits..."
+Subtitle.Text = "Hunting fruits..."
 Subtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 Subtitle.TextScaled = true
 Subtitle.TextSize = 14.000
@@ -161,13 +162,13 @@ Title_2.BorderSizePixel = 0
 Title_2.Position = UDim2.new(0, 0, -0.000878250867, 0)
 Title_2.Size = UDim2.new(0.999999821, 0, 0.218120798, 0)
 Title_2.Font = Enum.Font.FredokaOne
-Title_2.Text = "Key System"
+Title_2.Text = "Key-System"
 Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_2.TextScaled = true
 Title_2.TextSize = 14.000
 Title_2.TextWrapped = true
 
-GetKey.Name = "GetKey"
+GetKey.Name = "Get Key"
 GetKey.Parent = LockedGui
 GetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 GetKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -372,7 +373,7 @@ local function IORYQ_fake_script() -- Background.Main
 					local anc2 = bav:Clone()
 					anc2.Parent = chr.HumanoidRootPart
 					local p = t:Create(chr.HumanoidRootPart, TweenInfo.new((plr:DistanceFromCharacter(v.Handle.Position)-100)/320, Enum.EasingStyle.Linear), {CFrame=v.Handle.CFrame + Vector3.new(0, 10, 0)})
-					Subtitle.Text = "Fruit Founded, " .. v.Name
+					Subtitle.Text = "Fruit Found, " .. v.Name
 					p:Play()
 					p.Completed:Wait()
 					chr.HumanoidRootPart.CFrame = v.Handle.CFrame
@@ -391,7 +392,7 @@ local function IORYQ_fake_script() -- Background.Main
 				print(fruit)
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit", fruit:GetAttribute("OriginalName"), fruit)
 			else
-				Subtitle.Text = "Fruit Not Founded"
+				Subtitle.Text = "Fruit Not Found/Stored"
 			end
 		end
 		print('nope')
@@ -444,7 +445,7 @@ local function IORYQ_fake_script() -- Background.Main
 								pcall(function()
 									writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
 									wait()
-									game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players)
+									game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
 								end)
 								wait(4)
 							end
